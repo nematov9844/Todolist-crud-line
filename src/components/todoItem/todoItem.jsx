@@ -31,7 +31,7 @@ export default function TodoItem({ item, toggleTask, editTask, deleteTask, setEd
         </>
       ) : (
         <>
-          <span className={item.checked ? "line-through" : ""}>{item.name}</span>
+          <span className={item.checked ? "line-through" : ""}> <span className="text-white">{item.name}</span> </span>
           <button onClick={handleEdit} className="bg-fuchsia-700 text-white px-3 rounded-md">Edit</button>
         </>
       )}

@@ -78,7 +78,7 @@ export default function Todolist() {
     (tasks.filter((task) => task.checked).length / tasks.length) * 100 || 0;
 
   return (
-    <div className="flex flex-col items-center w-full mt-5 gap-5 bg-gradient-to-t from-green-500 to-red-500 via-gray-400">
+    <div className="flex flex-col items-center  p-5 rounded-md  shadow-[rgba(0,0,0,0.4)] shadow-md gap-5 bg-[rgba(71,120,255,0.24)]">
       <form
         className="border-2 border-blue-500 rounded-lg"
         onSubmit={(e) => e.preventDefault()}
@@ -86,7 +86,7 @@ export default function Todolist() {
         <input
           type="text"
           placeholder="Search..."
-          className="bg-transparent pl-3 outline-none"
+          className="bg-transparent pl-3 outline-none  text-white"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -101,7 +101,7 @@ export default function Todolist() {
       >
         <input
           type="text"
-          className="bg-transparent pl-3 outline-none"
+          className="bg-transparent pl-3 outline-none text-white font-medium"
           placeholder="Add Task"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
@@ -133,7 +133,7 @@ export default function Todolist() {
             />
           ))}
       </div>
-      <div className="w-full bg-gray-300 max-w-[450px] rounded-full h-2.5 mt-5">
+      <div className="w-full bg-gray-300 max-w-[450px]  rounded-full h-2.5 mt-5">
       <div
   className={`${
     progress <= 10
@@ -161,7 +161,7 @@ export default function Todolist() {
 
       </div>
 
-      <p>{Math.round(progress)}% completed</p>
+      <p className="text-white">{Math.round(progress)}% completed</p>
     </div>
   );
 }
